@@ -1,0 +1,12 @@
+{
+    "name": "Json",
+    "location": "Koboko",
+    "subsidiaries": [
+        {
+            "country": "Uganda"
+        },
+        {
+            "country": "South sudan"
+        }
+    ]
+}

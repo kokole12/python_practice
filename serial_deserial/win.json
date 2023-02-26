@@ -1,0 +1,12 @@
+{
+    "name": "Winnie",
+    "age": 16,
+    "subcidiaries": [
+        {
+            "nationality": "`ugandan"
+        },
+        {
+            "nationality": "South sudanese"
+        }
+    ]
+}

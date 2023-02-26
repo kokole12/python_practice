@@ -1,0 +1,21 @@
+The "0-addition" module
+=======================
+
+using "add" and "mul"
+---------------------
+
+Checks the sum and product from the add and mul function.
+First import "add" and "mul" from "0-addition" module
+
+    >>> from 0-addition import add, mul
+
+Now use it:
+
+    >>> add(4, 6)
+    10
+    >>> add(2, 4)
+    6
+    >>> mul(3, 4)
+    12
+    >>> mul('a', 3)
+    'aaa'

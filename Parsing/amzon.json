@@ -1,0 +1,12 @@
+{
+    "company": "Amazon",
+    "country": "USA",
+    "subsidiaries": [
+        {
+            "company": "Audible"
+        },
+        {
+            "company": "Amazon"
+        }
+    ]
+}
