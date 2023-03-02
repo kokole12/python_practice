@@ -11,8 +11,10 @@ class Linkedlist:
     def insertAtbeginning(self, data):
         new_node =  Node(data, self.head)
         self.head = new_node
-    
+
+    """ Inserting at the end of the linked list""" 
     def insertAtEnd(self, data):
+        """ Declaring the node"""
         new_node = Node(data)
         if self.head is None:
             self.head = new_node
@@ -46,7 +48,7 @@ class Linkedlist:
             self.head = self.head.next
             return  
         
-        
+
     def print(self):
         if self.head is None:
             print("empty list")
