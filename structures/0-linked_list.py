@@ -9,31 +9,54 @@ class Linkedlist:
         self.head = None
     
     def insertAtbeginning(self, data):
-        node  = Node(data, self.head)
-        self.head = node
+        new_node =  Node(data, self.head)
+        self.head = new_node
     
     def insertAtEnd(self, data):
+        new_node = Node(data)
         if self.head is None:
-            self.head = Node(data, None)
+            self.head = new_node
             return
 
-        itr = self.head
-        while itr.next:
-            itr = itr.next
+        last_node = self.head
+        while last_node.next is not None:
+            last_node = last_node.next
         
-        itr.next = Node(data, None)
+        last_node.next = new_node
 
+    def insertValues(self, data_list):
+        self.head = None
+        for data in data_list:
+            self.insertAtEnd(data)
+    
+    def get_length(self):
+        count = 0
+        last_node = self.head
+        while last_node:
+            count +=1
+            last_node = last_node.next
+        
+        return count
+    
 
+    def remove_At(self, index):
+        if index < 0 or index >= self.get_length():
+            raise Exception("this is not a valid index")
+        if index >= 0:
+            self.head = self.head.next
+            return  
+        
+        
     def print(self):
         if self.head is None:
             print("empty list")
             return
         
-        itr = self.head
+        current_node = self.head
         lls = ''
-        while itr:
-            lls += str(itr.data) + '-->'
-            itr = itr.next
+        while current_node:
+            lls += str(current_node.data) + '-->'
+            current_node = current_node.next
         print(lls)
 
 
@@ -45,4 +68,9 @@ if __name__ == "__main__":
     ll.insertAtEnd(4)
     ll.insertAtEnd(6)
     ll.insertAtEnd(10)
+
+    ll.insertValues([1, 2, 9, 20])
+
+    length = ll.get_length()
+    print("the length = {}".format(length))
     ll.print()
