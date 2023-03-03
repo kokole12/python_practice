@@ -19,7 +19,7 @@ def locate_card(cards, query):
     print('cards', cards)
     print('query', query)
     """ setting up a loop for repeatition"""
-    while True:
+    while position < len(cards):
     
         print('position', position)
         """check if element at the current position match query"""
@@ -32,6 +32,5 @@ def locate_card(cards, query):
         position += 1
 
         """ check if we have reached the end of list cards"""
-        if position == len(cards):
-            """ query not found"""
-            return -1
+        
+        return -1
