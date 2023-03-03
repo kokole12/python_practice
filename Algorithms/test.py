@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-locate_card = __import__('1-algo').locate_card
+locate_card = __import__('0-algo').locate_card
 
 if __name__ == '__main__':
 
