@@ -16,4 +16,3 @@ if __name__ == '__main__':
     end_time = time.time()
     runtime = end_time - start_time
     print('runtime: {} seconds'.format(runtime))
-
