@@ -12,4 +12,13 @@ if __name__ == '__main__':
         'output': 3
     })
 
+
+    """ A list of 8 rotated 5 times"""
+    test.append({
+        'input':{
+            'nums': [9, 8, 7, 6, 5, 1, 3, 4]
+        }, 
+        'output': 5
+    })
+
     pprint(test)
