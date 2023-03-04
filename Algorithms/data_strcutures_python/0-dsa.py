@@ -25,7 +25,10 @@ class Link_list:
             last_node = last_node.next
         
         last_node.next = new_node
-
+        
+    def __repr__(self):
+        return 'Node: %s' %self.data
+    
     def print_list(self):
         if self.head is None:
             print('empty list')
