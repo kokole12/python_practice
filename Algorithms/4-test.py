@@ -7,7 +7,7 @@ if __name__ == '__main__':
     """ a list of 10 items rotated 3 times"""
     tests.append({
         'input':{
-            'nums': [10, 9, 8, 1, 2, 3, 4, 5, 6, 7]
+            'nums': [8, 9, 10, 1, 2, 3, 4, 5, 6, 7]
         },
         'output': 3
     })
