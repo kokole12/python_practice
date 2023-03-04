@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+def recursive_binary_search(list, target):
+    if len(list) == 0:
+        return None
+    else:
+        mid = len(list)//2
+        if list[mid] == target:
+            return True
+        elif list[mid] < target:
+            recursive_binary_search(list[mid+1:], target)
+        else:
+            recursive_binary_search(list[:mid], target)
+    
