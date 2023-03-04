@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def count_rotations(nums):
+def count_rotations_linear(nums):
     
     position = 1
 
