@@ -20,6 +20,6 @@ if __name__ == '__main__':
         }, 
         'output': 5
     })
-    test = tests[1]
+    test = tests[0]
     print(count_rotations_linear(test['input']['nums'])== test['output'])
     pprint(tests)
