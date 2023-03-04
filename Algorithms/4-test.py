@@ -16,10 +16,10 @@ if __name__ == '__main__':
     """ A list of 8 rotated 5 times"""
     tests.append({
         'input':{
-            'nums': [9, 8, 7, 6, 5, 1, 3, 4]
+            'nums': [5, 6, 7, 9, 1, 3, 4]
         }, 
-        'output': 5
+        'output': 4
     })
-    test = tests[0]
+    test = tests[1]
     print(count_rotations_linear(test['input']['nums'])== test['output'])
     pprint(tests)
