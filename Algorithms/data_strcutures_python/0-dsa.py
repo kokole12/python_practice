@@ -25,9 +25,9 @@ class Link_list:
             last_node = last_node.next
         
         last_node.next = new_node
-        
+
     def __repr__(self):
-        return 'Node: %s' %self.data
+        return '<Node: %s>' %self.data
     
     def print_list(self):
         if self.head is None:
@@ -48,3 +48,4 @@ if __name__ == '__main__':
 
     ll.insertAtEnd(5)
     ll.print_list()
+    ll.__repr__()
