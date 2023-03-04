@@ -61,4 +61,3 @@ if __name__ == '__main__':
 
     ll.insertAtEnd(5)
     ll.print_list()
-    ll.__repr__()
