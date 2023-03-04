@@ -25,6 +25,19 @@ class Link_list:
             last_node = last_node.next
         
         last_node.next = new_node
+    def insertAtPosition(self, data, index):
+        if index == 0:
+            self.insertAtBeginning(data)
+        
+        new_node = Node(data)
+        current = self.head
+
+        while index > 1:
+            current = new_node.next
+            index -= 1
+        prev = current
+        next = current.next
+        
 
     def __repr__(self):
         return '<Node: %s>' %self.data
