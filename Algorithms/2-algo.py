@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 binary_search = __import__('generic_binary_search').binary_search
+
+
 def first_position(nums, target):
     def condition(mid):
         if nums[mid] == target:
@@ -13,6 +15,7 @@ def first_position(nums, target):
 
     return binary_search(0, len(nums)-1, condition)
 
+
 def last_position(nums, target):
     def condition(mid):
         if nums[mid] == target:
@@ -24,6 +27,7 @@ def last_position(nums, target):
         else:
             return 'left'
     return binary_search(0, len(nums)-1, condition)
+
 
 def first_and_last_position(nums, target):
     return first_position(nums, target), last_position(nums, target) 
