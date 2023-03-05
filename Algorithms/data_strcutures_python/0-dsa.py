@@ -44,7 +44,7 @@ class Link_list:
             current_node = current_node.next
             count += 1
 
-            
+
     def removeAt(self, index):
         if index < 0 and index >= self.length_list():
             raise Exception("Invalid index")
@@ -96,6 +96,7 @@ if __name__ == '__main__':
     ll.insertAtEnd(8)
     ll.insertAtBeginning(11)
     ll.removeAt(1)
+    ll.insertAtPosition(0, 1)
     ll.print_list()
     length = ll.length_list()
     print('The length of the list is {}'.format(length))
