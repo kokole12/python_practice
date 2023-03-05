@@ -39,6 +39,23 @@ class Link_list:
         prev = current
         next = current.next
 
+    def removeAt(self, data, index):
+        if index < 0 and index >= self.length_list():
+            raise Exception("Invalid index")
+        
+        if index == 0:
+            self.head == self.head.next
+            return
+        
+        count = 0
+        current_node = self.head
+        while current_node:
+            if count == index - 1:
+                current_node.next = current_node.next.next
+            current_node = current_node.next
+        
+        
+
     def __repr__(self):
         return '<Node: %s>' %self.data
     
