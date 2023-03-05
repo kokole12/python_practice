@@ -42,6 +42,16 @@ class Link_list:
     def __repr__(self):
         return '<Node: %s>' %self.data
     
+
+    def length_list(self):
+        count = 0
+        current = self.head
+        while current:
+            count += 1
+            current = current.next
+        return count
+
+
     def print_list(self):
         if self.head is None:
             print('empty list')
@@ -61,3 +71,5 @@ if __name__ == '__main__':
 
     ll.insertAtEnd(5)
     ll.print_list()
+    length = ll.length_list()
+    print('The length of the list is {}'.format(length))
