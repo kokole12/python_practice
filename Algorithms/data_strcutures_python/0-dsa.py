@@ -27,19 +27,25 @@ class Link_list:
         last_node.next = new_node
 
     def insertAtPosition(self, data, index):
+        if index < 0 and index >= self.length_list():
+            raise Exception('invalid index')
+
         if index == 0:
             self.insertAtBeginning(data)
+            return
         
-        new_node = Node(data)
-        current = self.head
+        count = 0
+        current_node =  self.head
+        while current_node:
+            if count == index - 1:
+                node = Node(data, current_node.next)
+                current_node.next = node
+                break
+            current_node = current_node.next
+            count += 1
 
-        while index > 1:
-            current = new_node.next
-            index -= 1
-        prev = current
-        next = current.next
-
-    def removeAt(self, data, index):
+            
+    def removeAt(self, index):
         if index < 0 and index >= self.length_list():
             raise Exception("Invalid index")
         
@@ -52,9 +58,10 @@ class Link_list:
         while current_node:
             if count == index - 1:
                 current_node.next = current_node.next.next
+                break
             current_node = current_node.next
         
-        
+
 
     def __repr__(self):
         return '<Node: %s>' %self.data
@@ -85,8 +92,10 @@ if __name__ == '__main__':
     ll = Link_list()
     ll.insertAtBeginning(4)
     ll.insertAtBeginning(7)
-
     ll.insertAtEnd(5)
+    ll.insertAtEnd(8)
+    ll.insertAtBeginning(11)
+    ll.removeAt(1)
     ll.print_list()
     length = ll.length_list()
     print('The length of the list is {}'.format(length))
