@@ -57,7 +57,6 @@ class Doubly_linked_list:
                 break
 
             current_node = current_node.next
-            node.prev = current_node 
             count += 1
 
     def print_dll(self):
@@ -83,6 +82,8 @@ dlls.insetAtBeginning(10)
 
 dlls.insertAtEnd(20)
 dlls.insertAtEnd(40)
+
+dlls.insertAtPosition(4, 2)
 dlls.print_dll()
 length = dlls.get_length()
 print(length)
