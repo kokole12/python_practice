@@ -21,6 +21,20 @@ class Doubly_linked_list:
         
         self.head= node
 
+    def insertAtEnd(self, data):
+        node = Node(data)
+
+        if self.head is None:
+            self.head = node
+            return
+        
+        last_node = self.head
+        while last_node.next is not None:
+            last_node = last_node.next
+        
+        last_node.next = node
+        node.prev =  last_node
+
     def print_dll(self):
         if self.head is None:
             print('empty list')
@@ -41,4 +55,7 @@ dlls = Doubly_linked_list()
 dlls.insetAtBeginning(3)
 dlls.insetAtBeginning(4)
 dlls.insetAtBeginning(10)
+
+dlls.insertAtEnd(20)
+dlls.insertAtEnd(40)
 dlls.print_dll()
