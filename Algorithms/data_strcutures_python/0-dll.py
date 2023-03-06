@@ -26,6 +26,7 @@ class Doubly_linked_list:
 
         if self.head is None:
             self.head = node
+            node.prev = None
             return
         
         last_node = self.head
