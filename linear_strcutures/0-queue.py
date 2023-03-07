@@ -3,10 +3,10 @@ class Queue:
         self.queue = []
     
 
-    def enque(self, item):
-        self.enque.append(item)
+    def enqueue(self, item):
+        self.queue.append(item)
 
-    def deque(self, item):
+    def dequeue(self):
         if len(self.queue) < 1:
             return None
         return self.queue.pop(0)
